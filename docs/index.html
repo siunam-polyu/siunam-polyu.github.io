@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://data.weather.gov.hk/weatherAPI/opendata/weather.php https://api.open-meteo.com/v1/forecast https://geocoding-api.open-meteo.com/v1/search; require-trusted-types-for 'script'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <h1>Simple Weather App</h1>
+            
+            <h2>Global Weather</h2>
+            <div class="global-search">
+                <input type="text" id="global-search" placeholder="Search weather for any city in the world...">
+                <button id="global-search-btn">Search</button>
+            </div>
+            
+            <h2>Hong Kong Weather</h2>
+            <div class="hk-weather">
+                <select id="district-select"></select>
+                <button id="search-btn">Refresh Weather</button>
+            </div>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <h2 id="city-name">--</h2>
+                <div class="weather-details">
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+                    <div class="weather-description" id="weather-description">--</div>
+                </div>
+                <div class="additional-info">
+                    <div class="info-item">
+                        <span>Humidity:</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="info-item">
+                        <span>Wind Speed:</span>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                </div>
+                <div class="update-time">
+                    <span>Last Updated: </span>
+                    <span id="last-update">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
