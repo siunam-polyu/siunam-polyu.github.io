@@ -35,13 +35,13 @@ DOM.districtSelect.addEventListener('change', handleDistrictChange);
 
 async function handleGlobalSearch() {
     try {
-        gtag('event', 'global_weather_search');
-
         const city = DOM.globalSearch.value.trim();
         if (!city) {
             alert('Please enter a city name');
             return;
         }
+
+        gtag('event', 'global_weather_search');
         
         const weatherData = await fetchGlobalWeather(city);
         updateUIWithGlobalData(weatherData);
@@ -64,10 +64,10 @@ async function handleHKSearch() {
 
 function handleDistrictChange() {
     try {
-        gtag('event', 'hk_weather_change_district');
-
         const selectedDistrict = DOM.districtSelect.value;
         if (selectedDistrict && window.hkWeatherData) {
+            gtag('event', 'hk_weather_change_district');
+
             updateUIWithHKData(window.hkWeatherData, selectedDistrict);
         }
     } catch (error) {
