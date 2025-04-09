@@ -160,7 +160,16 @@ body {
 
 .update-time {
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     font-size: 0.8rem;
     color: #666;
     font-style: italic;
 } 
+
+.container-footer {
+    text-align: right
+}
+
+.github-icon {
+    width: 5%;
+}

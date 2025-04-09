@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://data.weather.gov.hk/weatherAPI/opendata/weather.php https://api.open-meteo.com/v1/forecast https://geocoding-api.open-meteo.com/v1/search; require-trusted-types-for 'script'; frame-src 'none'; base-uri 'none'; form-action 'none'">
     <title>Simple Weather App</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4QMDNMYG3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E4QMDNMYG3');
+</script>
+
 <body>
     <div class="container">
         <div class="search-box">
@@ -48,6 +58,10 @@
                     <span id="last-update">--</span>
                 </div>
             </div>
+        </div>
+
+        <div class="container-footer">
+            <a href="https://github.com/siunam-polyu/siunam-polyu.github.io" target="_blank"><img class="github-icon" src="/assets/image/github.svg"></a>
         </div>
     </div>
     
